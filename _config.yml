@@ -1,40 +1,69 @@
-# Name of your blog (this will show up at the top of your page and in the RSS feed)
-name: Optimisticmonkey Blog
+title:            Site Title
+description:      Describe your website here.
+disqus_shortname: hpstrtheme
+reading_time:     true
+words_per_minute: 200
+# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url:
 
-# Short description (goes below the title; it will also be used in the RSS feed)
-description: This is my Jekyll Blog.
+# Owner/author information
+owner:
+  name:           Your Name
+  avatar:         avatar.jpg
+  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  email:          you@email.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:    +yourid
 
-# Your name, as you want it to appear underneath each post and in the footer
-author: Bob Cober
+# Background image to be tiled on all pages
+background: 
 
-# Your email if you want it to be linked on the contact page
-author_email: bobcober@gmail.com
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
 
-# The directory for category index pages. Change it to something else if
-# for example you want links like /categories/category1 instead of /category1
-category_dir: /
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+highlighter: pygments
+markdown:    kramdown
+gems:
+  - jekyll-sitemap
+sass:
+  sass_dir: _sass
+  style: compressed
 
-# Uncomment if you are planning to run the blog in a subdirectory
-# Note - if you enable this, and attempt to view your site locally you have to use the baseurl in your local path.
-# Example, you must use http://localhost:4000/path/to/blog
-#baseurl: /path/to/blog 
-baseurl: 
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
 
-# The URL of your actual domain. This will be used to make absolute links in the RSS feed.
-url: http://casualdistractiongames.com/
+# Amount of post to show on home page
+paginate: 5
 
-#### Under the Hood Stuff #####
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
 
-# Use rdiscount as the markdown engine because it generates html5 compliant code for stuff like footnotes
-# If you use maroku (default engine) some of your generated pages may not validate or lint as html5
-# If you don't have it install it via gem install rdiscount
-markdown: rdiscount
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
 
-# Makes pretty (descriptive) permalinks. See Jekyll docs for alternatives.
-permalink: pretty
-
-# How many articles do you wish to appear on the front page:
-paginate: 3
-
-# Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
